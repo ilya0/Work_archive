@@ -1,0 +1,35 @@
+body{
+
+  background:darkgoldenrod;
+}
+
+P{
+  color:orange;
+}
+
+
+div  {
+ /* border-width: 1px;
+  border-style: solid;
+  border-color: black;
+
+  */
+
+
+}
+
+
+#mammals{
+  color:red; background: blue;
+}
+
+#birds{
+  color:blue; background: red;
+}
+
+#fish{
+  color:orange; background: red;
+
+}
+
+make all the mammals red, all the birds blue, and all the fish orange using CSS classes

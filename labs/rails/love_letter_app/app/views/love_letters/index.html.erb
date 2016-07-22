@@ -1,0 +1,12 @@
+<% @love_letters.each do |love_letter| %>
+
+  <p><%= love_letter.message %></p>
+  <p><%= love_letter.lover_id %></p>
+  <p><%= love_letter.lover.name %></p>
+  <form method="POST" action="/love_letters/<%= love_letter.id %>">
+    <!-- form hack to tell the server to do a DELETE  -->
+    <input name="lover_id" value="DELETE" type="hidden">
+    <button>Delete</button>
+  </form>
+
+<% end %>

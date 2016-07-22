@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+
+<html ng-app="artApp">
+  <head >
+    <meta charset="utf-8">
+    <title>Intro to Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/homeController.js"></script>
+  </head>
+
+  <body>
+<h1> Metropolitan Museum of artnozzles </h1>
+<br><hr><br>
+<h4> Exhibity: </h4>
+  <div ng-controller = "functionModule1 as fntM1">
+    <img src={{fntM1.header}}>
+    <h4>{{fntM1.arttitle}}</h4>
+    <h4>{{fntM1.name}}</h4>
+    </div>
+
+<br><hr><br>
+
+
+
+<h3> General Info: </h3>
+  <div ng-controller = "functionModule2 as fntM2">
+
+    {{fntM2.hours}}
+    {{fntM2.test}}
+
+    <h4> Suggested Admission: {{fntM2.admission}} </h4>
+  </div>
+
+<br><hr><br>
+
+  <div ng-controller = "functionModule3 as fntM3">
+
+  <h2> Donor Information </h2>
+  <h3>Contact:</h3>
+  {{fntM3.contactEmail}}&middot;{{fntM3.contactNumber}}
+
+  <h2> Donor amounts </h2>
+  {{fntM3.donationAmounts}}
+
+  </div>
+
+
+
+
+  </body>
+
+
+</html>

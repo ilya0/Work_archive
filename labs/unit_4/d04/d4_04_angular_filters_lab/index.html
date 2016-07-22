@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app=bankGaApp>
+<head>
+  <title>Bank of GA</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="./app.js"></script>
+
+</head>
+<body ng-controller ="bankController as bankCtrl">
+
+  <form>
+    <fieldset>
+      <span>$</span>
+
+
+      <input ng-model = "bankCtrl.newEntryobject.amount" type="number" name="amount" id="amount" placeholder="0.00">
+
+      <label for="withdrawl">Withdrawl</label>
+      <input ng-model = "bankCtrl.newEntryobject.typeamount"  type="radio" name="action" value="withdrawl" id="withdrawl">
+
+      <label  for="deposit">Deposit</label>
+      <input ng-model = "bankCtrl.newEntryobject.typeamount"  type="radio" name="action" value="deposit" id="deposit">
+
+      <button ng-click="bankCtrl.add()">Go</button>
+
+      {{bankCtrl.message}} {{bankCtrl.balance}}
+    </fieldset>
+  </form>
+
+  <div>Current Balance: <span id="balance"></span></div>
+
+  <table id="transactions">
+    <th>
+      <tr ng-repeat="entries in bankCtrl.entries">
+        <td>{{entries.amount}}</td><td>{{entries.typeamount}}</td><td>{{entries.date}}</td>
+      </tr>
+    </th>
+    <tbody>
+    </tbody>
+  </table>
+
+
+</body>
+</html>

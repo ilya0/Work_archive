@@ -1,0 +1,12 @@
+<% @lovers.each do |lover| %>
+  <p><%= lover.name %></p>
+  <form method="POST" action="/lovers/<%= lover.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <button>Delete</button>
+  </form>
+
+  <!-- this will go to /lovers/15/love_letters/new -->
+
+  <a href="/lovers/<%= lover.id %>/love_letters/new">New Letter</a>
+
+<% end %>

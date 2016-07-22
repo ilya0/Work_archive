@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="DemoApp">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src ="app.js"></script>
+  <script src="dreams_controller.js"></script>
+  <script src="journal_controller.js"></script>
+
+</head>
+<body>
+{{2+2}}
+<!-- 1. create app.js to define our application called DEmoApp
+2. add ng-app directive to html
+3. create a dreams_controller.js
+4. add an ng-controller directive to html
+
+pt.2
+Create an input for a "newTitle" using the ng-model directive that binds to the controller
+Create an textarea input for a "newBody" using the ng-model directive that binds to the controller
+Create radio button inputs for "private" and "public" using the ng-model directive that binds to the controller
+ -->
+
+  <div ng-controller = "DreamsController as dreams">
+
+    <input type="text" ng-model="dreams.message">
+
+    {{dreams.message}}
+
+  </div>
+
+  <div ng-controller = "JournalController as journal">
+    <h1> JournalController </h1>
+    <form>
+      <label>Title</label>
+      <input type="text" ng-model="journal.newtitle">
+      <label> Public </label>
+      <input type="radio" ng-model="journal.ispublic" ng-value="true">
+      <label> Private </label>
+      <input type="radio" ng-model="journal.ispublic" ng-value="false">
+      <label> Body </label>
+      <textarea ng-model="journal.newBody"></textarea>
+      <button ng-click="journal.add()"> Add post </button>
+
+      <div ng-repeat="entry in journal.entries">
+      <p> hi {{entry}} {{$index}}</p>
+      </div>
+      <button ng-click="journal.greet()"> Hi </button>
+
+    </form>
+  </div>
+
+
+
+</body>
+</html>

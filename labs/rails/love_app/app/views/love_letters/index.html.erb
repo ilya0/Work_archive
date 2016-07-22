@@ -1,0 +1,7 @@
+<% @lover_letters.each do |lover_letter| %>
+<%= lover_letter.message %>
+
+<form method = "POST" action="/love_letters/<%= love_letter.id %>">
+<input name="_method" value="DELETE" type="hidden">
+<button>Delete</button>
+<% end %>

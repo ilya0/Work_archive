@@ -1,0 +1,55 @@
+
+```
+each player gets 7 cards from a 52 card deck
+the rest of the cards go into a "pool" or an "ocean"
+player1 asks player2 for a specific card based on a face value
+if player player2 has that card(s) they must give the card to player1
+else if player1 has to "go fish" and dawr a new card from the "ocean"/"pool"/"deck"
+else if player1 satisfied original request "fishes their wish" they get to ta
+another turn
+otherwise it's player2's turn
+if player gets all the cards of a face value they "match" then they remove them from their hand
+the game is over when one of the players has no more cards
+​
+2. Identify all the nouns.
+What are all the things in your game decription.
+This is the "data" or "state" in your game.
+​
+player
+card - face value
+deck
+pile/pool/ocean
+turn - state of the gamegame
+match
+​
+a deck has many cards
+cards have face value and suit
+a pile contains deck
+a player has a hand
+a hand contains cards
+a match is two to four cards
+a game has two players
+a player has a name and a birthday
+```
+​
+Identify what JavaScript objects can "model" or represent all your nouns/
+We can start with basic JavaScript objects or primative values.
+​
+var deck = [];
+var ocean = [];
+var player = {};
+​
+player = {};
+player.name ="string"
+player.bornOn ="date"
+player.hand = [];
+​
+var card = {};
+card.value = 13
+card.faceValue = "king"
+card.color = "red"
+card.suit = "spade"
+​
+6. Identify from the verbs what actions are performed by or to an object.
+What can you do to each? What things change the "state" of an object?
+What do we check or compute?

@@ -1,0 +1,21 @@
+ <!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>My App</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+</head>
+<body>
+
+  <div ng-controller="AppController as ctrl">
+    {{ ctrl.hello }}
+    {{3+3}}
+  </div>
+
+  <div ui-view></div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script>
+  <script type="text/javascript" src="/js/main.min.js"></script>
+
+</body>
+</html>
